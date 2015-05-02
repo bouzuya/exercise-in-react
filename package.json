@@ -38,5 +38,8 @@
     "clean": "gulp clean",
     "test": "gulp test",
     "watch": "gulp watch"
+  },
+  "dependencies": {
+    "react": "^0.13.2"
   }
 }
