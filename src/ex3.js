@@ -24,7 +24,4 @@ var Hello2 = React.createClass({
   }
 });
 
-React.render(
-  React.createElement(Hello2),
-  document.getElementById('container')
-);
+module.exports = React.createElement(Hello2);

@@ -20,7 +20,4 @@ var Timer = React.createClass({
   }
 });
 
-React.render(
-  React.createElement(Timer),
-  document.getElementById('container')
-);
+module.exports = React.createElement(Timer);

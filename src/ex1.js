@@ -7,7 +7,4 @@ var HelloMessage = React.createClass({
   }
 });
 
-React.render(
-  React.createElement(HelloMessage, { name: 'John' }),
-  document.getElementById('container')
-);
+module.exports = React.createElement(HelloMessage, { name: 'John' });
