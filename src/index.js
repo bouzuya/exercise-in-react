@@ -1,27 +1,30 @@
 // var ex1 = require('./ex1');
+// var ex2 = require('./ex2');
 var React = require('react');
 
-var Timer = React.createClass({
-  displayName: 'Timer',
+var Hello2 = React.createClass({
+  displayName: 'Hello2',
   getInitialState: function() {
-    return { secondsElapsed: 0 };
+    return { message: ''};
   },
-  tick: function() {
-    this.setState({ secondsElapsed: this.state.secondsElapsed + 1 });
-  },
-  componentDidMount: function() {
-    this.interval = setInterval(this.tick, 1000);
-  },
-  componentWillUnmount: function() {
-    clearInterval(this.interval);
+  onTextChanged: function(e) {
+    this.setState({ message: e.target.value });
   },
   render: function() {
     return React.createElement(
-      'div', null, 'Seconds Elapsed: ', this.state.secondsElapsed);
+      'div', null,
+      React.createElement(
+        'form', null,
+        React.createElement(
+          'input', { onChange: this.onTextChanged }
+        )
+      ),
+      React.createElement('div', null, 'Hello, ', this.state.message)
+    );
   }
 });
 
 React.render(
-  React.createElement(Timer),
+  React.createElement(Hello2),
   document.getElementById('container')
 );
