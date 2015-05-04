@@ -53,6 +53,9 @@ class EntryListItem extends React.Component {
     return React.createElement(
       'li', {
         className: 'entry-list-item' + (isOpen ? ' is-open' : ''),
+        style: {
+          top: (isOpen ? 0 : this.props.index * 72) + 'px'
+        },
         onClick: this.onClick.bind(this)
       },
       React.createElement(Entry, {
@@ -81,9 +84,10 @@ class EntryList extends React.Component {
   render() {
     return React.createElement(
       'ul', { className: 'entry-list' },
-      this.props.entries.map((i) => {
+      this.props.entries.map((i, index) => {
         return React.createElement(EntryListItem, {
           entry: i,
+          index: index,
           isOpen: (i.date === this.state.openedEntryDate),
           onOpen: this.onOpen.bind(this),
           onClose: this.onClose.bind(this)
