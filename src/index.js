@@ -5,6 +5,7 @@ var React = require('react');
 // var ex = require('./ex3');
 // var ex = require('./ex4');
 // var ex = require('./ex5');
-var ex = require('./ex6');
+// var ex = require('./ex6');
+var ex = require('./ex7');
 
 React.render(ex, document.getElementById('container'));
