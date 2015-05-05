@@ -1,4 +1,4 @@
-var React = require('react');
+import React from 'react';
 
 var Timer = React.createClass({
   displayName: 'Timer',
@@ -20,4 +20,4 @@ var Timer = React.createClass({
   }
 });
 
-module.exports = React.createElement(Timer);
+export default React.createElement(Timer);

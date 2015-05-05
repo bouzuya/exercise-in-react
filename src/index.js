@@ -1,11 +1,11 @@
-var React = require('react');
+import React from 'react';
 
-// var ex = require('./ex1');
-// var ex = require('./ex2');
-// var ex = require('./ex3');
-// var ex = require('./ex4');
-// var ex = require('./ex5');
-// var ex = require('./ex6');
-var ex = require('./ex7');
+// import ex from './ex1';
+// import ex from './ex2';
+// import ex from './ex3';
+// import ex from './ex4';
+// import ex from './ex5';
+// import ex from './ex6';
+import ex from './ex7';
 
 React.render(ex, document.getElementById('container'));

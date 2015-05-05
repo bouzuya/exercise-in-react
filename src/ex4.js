@@ -1,4 +1,4 @@
-var React = require('react');
+import React from 'react';
 
 var MessageInput = React.createClass({
   displayName: 'MessageInput',
@@ -37,4 +37,4 @@ var Hello3 = React.createClass({
   }
 });
 
-module.exports = React.createElement(Hello3);
+export default React.createElement(Hello3);

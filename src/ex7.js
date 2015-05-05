@@ -1,4 +1,4 @@
-var React = require('react');
+import React from 'react';
 
 class Entry extends React.Component {
   constructor(props) {
@@ -131,6 +131,4 @@ class App extends React.Component {
   }
 }
 
-var AppElement = React.createElement(App);
-
-module.exports = AppElement;
+export default React.createElement(App);

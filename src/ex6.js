@@ -1,4 +1,4 @@
-var React = require('react');
+import React from 'react';
 
 var Entry = React.createClass({
   displayName: 'Entry',
@@ -114,6 +114,4 @@ var App = React.createClass({
   }
 });
 
-var AppElement = React.createElement(App);
-
-module.exports = AppElement;
+export default React.createElement(App);

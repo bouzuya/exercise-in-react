@@ -1,4 +1,4 @@
-var React = require('react');
+import React from 'react';
 
 var HelloMessage = React.createClass({
   displayName: 'HelloMessage',
@@ -7,4 +7,4 @@ var HelloMessage = React.createClass({
   }
 });
 
-module.exports = React.createElement(HelloMessage, { name: 'John' });
+export default React.createElement(HelloMessage, { name: 'John' });
