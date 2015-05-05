@@ -6,6 +6,7 @@ import React from 'react';
 // import ex from './ex4';
 // import ex from './ex5';
 // import ex from './ex6';
-import ex from './ex7';
+// import ex from './ex7';
+import ex from './ex8/';
 
 React.render(ex, document.getElementById('container'));
