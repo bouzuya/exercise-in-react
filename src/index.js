@@ -9,4 +9,6 @@ import React from 'react';
 // import ex from './ex7';
 import ex from './ex8/';
 
-React.render(ex, document.getElementById('container'));
+window.addEventListener('DOMContentLoaded', function() {
+  React.render(ex, document.body);
+});
