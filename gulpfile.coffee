@@ -16,7 +16,7 @@ ignoreError = (stream) ->
     gutil.log e
     @emit 'end'
 
-gulp.task 'build', ['build-html', 'build-js'], ->
+gulp.task 'build', ['build-css', 'build-html', 'build-js'], ->
   bundled = browserify
     debug: false
   .add './.tmp/src/index.js'
@@ -26,7 +26,11 @@ gulp.task 'build', ['build-html', 'build-js'], ->
   .pipe buffer()
   .pipe gulp.dest './dist/scripts/'
 
-gulp.task 'build-dev', ['build-html', 'build-js-dev'], ->
+gulp.task 'build-css', ->
+  gulp.src './src/**/*.css'
+  .pipe gulp.dest './dist/styles/'
+
+gulp.task 'build-dev', ['build-css', 'build-html', 'build-js-dev'], ->
   bundled = browserify
     debug: true
   .add './.tmp/src/index.js'
